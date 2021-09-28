@@ -22,6 +22,7 @@
             <li class="active"><a href="#hero"><i class="bx bx-home"></i>
                   <span>Home</span></a></li>
             <li><a href="#about"><i class="bx bx-user"></i> <span>Sobre</span></a></li>
+            <li><a href="#skills"><i class="bx bx-bookmark-alt-minus"></i> <span>Habilidades</span></a></li>
             <li><a href="#resume"><i class="bx bx-file-blank"></i> <span>Resumo</span></a></li>
             <li><a href="#services"><i class="bx bx-server"></i>Serviços</a></li>
             <li><a href="#contact"><i class="bx bx-envelope"></i>Contato</a></li>
