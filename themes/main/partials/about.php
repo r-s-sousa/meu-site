@@ -23,7 +23,7 @@
                <div class="col-lg-6">
                   <ul>
                      <li><i class="icofont-rounded-right"></i> <strong>Data
-                           de nascimento:</strong> 1 Nov 2000</li>
+                           de nascimento:</strong> 21 Nov 2000</li>
                      <li><i class="icofont-rounded-right"></i> <strong>Telefone:</strong>
                         (61) 9.9434-6828</li>
                      <li><i class="icofont-rounded-right"></i> <strong>Cidade:</strong>
