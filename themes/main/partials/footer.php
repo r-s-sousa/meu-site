@@ -2,6 +2,8 @@
 <footer id="footer">
    <div class="container">
       <div class="copyright">
+         Acessos: <?= $qtdAcessos; ?>
+         <br>
          &copy; Copyright <strong><span>Rafael Sousa</span></strong>
       </div>
       <div class="credits">

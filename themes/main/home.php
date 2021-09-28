@@ -9,19 +9,19 @@
    <?= $this->insert('main/partials/about'); ?>
 
    <?= $this->insert('main/partials/facts'); ?>
-   
+
    <?= $this->insert('main/partials/skills'); ?>
-   
+
    <?= $this->insert('main/partials/resume'); ?>
 
    <?= $this->insert('main/partials/services'); ?>
 
    <?= $this->insert('main/partials/contact'); ?>
-   
+
 </main>
 
-<?php 
-   $this->start('footer');
-   $this->insert('main/partials/footer');
-   $this->end();
+<?php
+$this->start('footer');
+$this->insert('main/partials/footer', ['qtdAcessos' => $qtdAcessos]);
+$this->end();
 ?>

@@ -3,6 +3,7 @@
 namespace Source\Controllers;
 
 use CoffeeCode\Router\Router;
+use Source\Models\Access;
 
 /**
  * Controlador das rotas iniciais
@@ -26,8 +27,20 @@ class Web extends Controller
     */
    public function home(): void
    {
+      $ipPC = $_SERVER['REMOTE_ADDR'];
+      $obNewAcess = (new Access)->find('ip = :ip', "ip=$ipPC")->fetch();
+      // Verifica se já existe, caso não exista cadastra
+      if(!$obNewAcess){
+         $obNewAcess = new Access;
+         $obNewAcess->ip = $ipPC;
+         $obNewAcess->save();
+      }
+
+      $qtdAcessos = (new Access)->find()->count();
+
       echo $this->view->render('main/home', [
          'title' => "HOME | " . SITE,
+         'qtdAcessos' => $qtdAcessos
       ]);
    }
 
