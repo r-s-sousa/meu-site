@@ -7,7 +7,7 @@
          &copy; Copyright <strong><span>Rafael Sousa</span></strong>
       </div>
       <div class="credits">
-         Designed by <a href="http://rafaelpage.rf.gd/">Rafael Sousa</a>
+         Designed by <a href="https://rafadev.rf.gd/">Rafael Sousa</a>
       </div>
    </div>
 </footer><!-- End  Footer -->
