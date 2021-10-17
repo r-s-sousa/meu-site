@@ -31,10 +31,8 @@ class UserController extends Controller
     */
    public function listar(): void
    {
-      $obUsers = (new User)->find()->fetch(true);
+      $obUsers = (new User)->find()->fetch(true) ?? [];
       
-      if(!$obUsers) $obUsers = [];
-
       echo $this->view->render('blogAdm/users/listUsuarios', [
          'title' => "ADM Usuarios | " . SITE,
          'obUsers' => $obUsers

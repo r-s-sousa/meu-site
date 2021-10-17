@@ -351,7 +351,7 @@ class BlogAdmController extends Controller
     */
    public function listarMensagens(): void
    {
-      $obMensagens = (new Mensagem)->find()->fetch(true);
+      $obMensagens = (new Mensagem)->find()->fetch(true) ?? [];
 
       echo $this->view->render('blogAdm/mensagens/listMensagens', [
          'title' => 'BlogAdm Listagem de mensagens | '. SITE,

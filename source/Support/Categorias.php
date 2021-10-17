@@ -122,13 +122,15 @@ class Categorias
       $arrayCountCategorys = [];
       $obPostagens = (new Postagem)->find('visivel = true', "", 'id,categorias')->fetch(true);
 
-      foreach ($obCategorias as $obCategoria) {
-         $arrayCountCategorys[$obCategoria->id] = 0;
-         if ($obPostagens) {
-            foreach ($obPostagens as $obPostagem) {
-               $obJsonDecoded = array_values(json_decode($obPostagem->categorias, true));
-               if (in_array($obCategoria->id, $obJsonDecoded))
-                  $arrayCountCategorys[$obCategoria->id]++;
+      if ($obCategorias) {
+         foreach ($obCategorias as $obCategoria) {
+            $arrayCountCategorys[$obCategoria->id] = 0;
+            if ($obPostagens) {
+               foreach ($obPostagens as $obPostagem) {
+                  $obJsonDecoded = array_values(json_decode($obPostagem->categorias, true));
+                  if (in_array($obCategoria->id, $obJsonDecoded))
+                     $arrayCountCategorys[$obCategoria->id]++;
+               }
             }
          }
       }

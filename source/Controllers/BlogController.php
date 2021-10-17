@@ -44,8 +44,8 @@ class BlogController extends Controller
    public function __construct(Router $router)
    {
       parent::__construct($router);
-      $this->obCategorias = (new Categoria)->find()->fetch(true);
-      $this->ultimas = (new BlogSupport($router))->getLastsPosts();
+      $this->obCategorias = (new Categoria)->find()->fetch(true) ?? [];
+      $this->ultimas = (new BlogSupport($router))->getLastsPosts() ?? [];
       $this->countCategorias = Categorias::getAllQtdCategorys();
    }
 
