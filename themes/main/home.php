@@ -20,8 +20,39 @@
 
 </main>
 
-<?php
-$this->start('footer');
-$this->insert('main/partials/footer', ['qtdAcessos' => $qtdAcessos]);
-$this->end();
-?>
+<?= $this->insert('main/partials/footer', ['qtdAcessos' => $qtdAcessos]); ?>
+
+<?= $this->start('scripts'); ?>
+<script>
+   $(document).ready(() => {
+      $('#formContact').submit((e) => {
+         e.preventDefault();
+         let dados = $(e.target).serialize();
+
+         $.ajax({
+            type: 'post',
+            url: '<?= $router->route('profile.recebeDadosDeContato'); ?>',
+            dataType: 'json',
+            data: dados,
+            success: dados => {
+               if (dados['resultado']) {
+                  $('.sent-message').html(dados['message']).show();
+                  $('.error-message').hide();
+               } else {
+                  $('.sent-message').hide();
+                  $('.error-message').html(dados['message']).show();
+               }
+            },
+            beforeSend: () => {
+               $('.error-message').hide();
+               $('.sent-message').hide();
+               $('.loading').show();
+            },
+            complete: () => {
+               $('.loading').hide();
+            }
+         })
+      })
+   })
+</script>
+<?= $this->end(); ?>

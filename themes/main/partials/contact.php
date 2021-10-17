@@ -37,12 +37,14 @@
          </div>
 
          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form id="formContact" action="<?= $router->route('profile.recebeDadosDeContato'); ?>" method="post" role="form" class="php-email-form">
                <div class="form-row">
+                  <div class="col-md-12 form-group text-center">
+                     <h3>Deixe sua mensagem</h3>
+                  </div>
                   <div class="form-group col-md-6">
                      <label for="name">Seu nome</label>
-                     <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Por favor digite
-                                 pelo menos 4 letras" />
+                     <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Por favor digite pelo menos 4 letras" />
                      <div class="validate"></div>
                   </div>
                   <div class="form-group col-md-6">
@@ -53,29 +55,22 @@
                </div>
                <div class="form-group">
                   <label for="name">Assunto</label>
-                  <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4" data-msg="Por favor digite pelo menos 8 letras no
-                              assunto" />
+                  <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4" data-msg="Por favor digite pelo menos 8 letras no assunto" />
                   <div class="validate"></div>
                </div>
                <div class="form-group">
                   <label for="name">Mensagem</label>
-                  <textarea class="form-control" name="message" rows="10" data-rule="required" data-msg="Por favor
-                              escreva alguma coisa"></textarea>
+                  <textarea class="form-control" name="message" rows="10" data-rule="required" data-msg="Por favor escreva alguma coisa"></textarea>
                   <div class="validate"></div>
                </div>
                <div class="mb-3">
                   <div class="loading">Carregando</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Sua mensagem foi enviada.
-                     Obrigado!</div>
+                  <div class="error-message rounded"></div>
+                  <div class="sent-message rounded">Sua mensagem foi enviada. Obrigado!</div>
                </div>
-               <div class="text-center">
-                  <button type="submit" disabled>Enviar mensagem</button>
-               </div>
+               <div class="text-center"><button type="submit">Enviar mensagem</button></div>
             </form>
          </div>
-
       </div>
-
    </div>
 </section><!-- End Contact Section -->
