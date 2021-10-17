@@ -5,15 +5,18 @@ namespace Source\Models;
 use CoffeeCode\DataLayer\DataLayer;
 
 /**
- * DAO - User
+ * DAO - Usuário
  */
 class User extends DataLayer
 {
    /**
-    * Construtor do DAO User
+    * Construtor do DAO usuários
     */
    public function __construct()
    {
-      parent::__construct('usuarios', ['nome', 'email', 'password']);
+      parent::__construct(
+         "usuarios",
+         ["nome", "email", "password", "token"]
+      );
    }
 }

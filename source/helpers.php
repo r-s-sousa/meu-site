@@ -4,20 +4,17 @@
  * Apresenta todos argumentos passados de uma 
  * forma bem atrativa
  *
- * @param boolean $exit Finaliza o site após apresentar os dados
  * @return void
  */
 function dd()
 {
    $args = func_get_args();
+   echo "<pre>";
+   if(count($args) == 1) var_dump($args[0]);
+   else var_dump($args);
+   echo "</pre>";
 
-   foreach ($args as $arg) {
-      echo "<pre>";
-      var_dump($arg);
-      echo "</pre>";
-
-      echo "<br>";
-   }
+   die();
 }
 
 /**
@@ -70,4 +67,17 @@ function setMessage($type, $message)
       default:
          break;
    }
+}
+
+/**
+ * Função responsável por converter dados em resposta JSON
+ *
+ * @param boolean $resultado
+ * @param string $mensagem
+ * @param mixed $dados
+ * @return string
+ */
+function jsonForResponseAjax(bool $resultado, string $mensagem, $dados = null): string
+{
+   return json_encode(['resultado' => $resultado, 'message'=>$mensagem, 'dados'=>$dados]);
 }

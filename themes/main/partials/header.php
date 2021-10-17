@@ -26,6 +26,7 @@
             <li><a href="#resume"><i class="bx bx-file-blank"></i> <span>Resumo</span></a></li>
             <li><a href="#services"><i class="bx bx-server"></i>Serviços</a></li>
             <li><a href="#contact"><i class="bx bx-envelope"></i>Contato</a></li>
+            <li><a target="_blanck" href="<?= $router->route('blog.home'); ?>"><i class="bx bxl-blogger"></i>Blog</a></li>
          </ul>
       </nav><!-- .nav-menu -->
       <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>

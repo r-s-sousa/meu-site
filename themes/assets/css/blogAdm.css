@@ -1,0 +1,57 @@
+*{
+   padding: 0;
+   margin: 0;
+}
+body {
+   background-color: rgba(211, 210, 210, .5);
+   box-sizing: border-box;
+   margin-top: 80px;
+}
+
+.bg-secondary {
+   background-color: rgba(4, 11, 20, .7) !important;
+   color: white;
+}
+
+/* #pagina h2::after{
+   content: "";
+   display: block;
+   width: 250px;
+   height: 3px;
+   margin-left: 430px;
+   background-color: rosybrown;
+} */
+
+#pagina {
+   margin-top: -10px;
+   background-color: white;
+   border-radius: 5px;
+   padding: 15px;
+}
+
+#pagina .tdAcoes{
+   font-size: 20px;
+}
+
+#categorias .itemCategory{
+   margin-right: 12px;
+}
+
+.nav-item{
+   padding-left: 7px;
+   padding-right: 7px;
+   border-radius: 10px;
+}
+
+.nav-item:hover {
+   background-color: rgba(127, 133, 151, .2);
+}
+
+.nav-item-final {
+   background-color: transparent;
+   padding-right: 0px;
+}
+
+.nav-item-final:hover {
+   background-color: transparent;
+}

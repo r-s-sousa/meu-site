@@ -8,7 +8,7 @@ use Source\Models\Access;
 /**
  * Controlador das rotas iniciais
  */
-class Web extends Controller
+class ProfileController extends Controller
 {
    /**
     * Construtor do controlador de rotas iniciais

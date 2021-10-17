@@ -4,7 +4,7 @@
  * GET
  */
 $router->group(null);
-$router->get("/", "Web:home", "web.home");
+$router->get("/", "ProfileController:home", "profile.home");
 
 /**
  * POST

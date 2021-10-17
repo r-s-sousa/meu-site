@@ -109,7 +109,7 @@
     return false;
   });
 
-  $('.back-to-top2').click(function() {
+  $('.back-to-top-2').click(function() {
    $('html, body').animate({
      scrollTop: 0
    }, 1500, 'easeInOutExpo');

@@ -5,7 +5,7 @@
  */
 
 $router->group("error");
-$router->get("/{errcode}", "Error:error", "error.error");
+$router->get("/{errcode}", "ErrorController:error", "error.error");
 
 
 /**

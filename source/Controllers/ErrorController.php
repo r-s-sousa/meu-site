@@ -5,7 +5,7 @@ namespace Source\Controllers;
 /**
  * Controlador de errors
  */
-class Error extends Controller
+class ErrorController extends Controller
 {
    /**
     * Construtor do controlador de erros
