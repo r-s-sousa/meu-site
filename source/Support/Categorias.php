@@ -22,11 +22,13 @@ class Categorias
       $qtdTotal = 0;
 
       $obPosts = (new Postagem)->find('visivel = true')->fetch(true);
-      foreach ($obPosts as $post) {
-         $categoriasJsonDecoded = json_decode($post->categorias);
-         foreach ($categoriasJsonDecoded as $categoriaId) {
-            if ($categoriaId == $idCategory) {
-               $qtdTotal++;
+      if ($obPosts) {
+         foreach ($obPosts as $post) {
+            $categoriasJsonDecoded = json_decode($post->categorias);
+            foreach ($categoriasJsonDecoded as $categoriaId) {
+               if ($categoriaId == $idCategory) {
+                  $qtdTotal++;
+               }
             }
          }
       }
