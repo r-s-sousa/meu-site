@@ -7,7 +7,7 @@
 <form class="form-signin border p-4" action="<?= $router->route('login.post'); ?>" method="POST">
    <div class="row">
       <div class="col-md-12 text-center">
-         <img class="mb-4 mt-2 img-fluid imgLogo rounded" src="<?= asset('img/wp1Login.jpg'); ?>">
+         <img class="mb-4 mt-2 img-fluid imgLogo rounded" src="<?= asset('img/dev7sm.jpg'); ?>">
       </div>
       <div class="col-md-12 text-center">
          <h1 class="h3 mb-3 font-weight-normal">Acesse sua conta</h1>

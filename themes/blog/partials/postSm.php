@@ -26,8 +26,8 @@
                   <?php endif; ?>
                   <div class="row d-flex align-self-center justify-content-sm-center">
                      <div class="img p-2">
-                        <img src="<?= $imgAutor; ?>" class="img-fluid" width="35px">
-                        <span class="post-author-name">Rogéria Rita</span>
+                        <img src="<?= $imgAutor; ?>" class="img-fluid" width="25px">
+                        <span class="post-author-name">Rafael Sousa</span>
                      </div>
                      <div class="p-2 post-author-data">
                         <?= $data; ?>

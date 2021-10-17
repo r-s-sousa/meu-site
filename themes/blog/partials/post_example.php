@@ -19,7 +19,7 @@
                <div class="row d-flex align-self-center justify-content-sm-center">
                   <div class="img p-2">
                      <img src="https://source.unsplash.com/random/30x30" class="img-fluid">
-                     <span>Rogéria Rita</span>
+                     <span>Rafael Sousa</span>
                   </div>
                   <div class="p-2">
                      FEBRUARY 17, 2019

@@ -1,7 +1,7 @@
 <!-- BARRA DE NAVEGAÇÃO COM DROPDOW ITENS -->
 <nav class="navbar navbar-expand-sm navbar-dark navBlog fixed-top" id="navBlog">
    <div class="container">
-      <a href="<?= $router->route('blog.home'); ?>" class="navbar-brand lineBottom">Blog Rogéria</a>
+      <a href="<?= $router->route('blog.home'); ?>" class="navbar-brand lineBottom">Blog Rafael</a>
 
       <!-- HAMBURGUES -->
       <button class="navbar-toggler" data-target="#navId3" data-toggle="collapse">
@@ -19,13 +19,10 @@
                <a href="<?= URL ?>" class="nav-link lineBottom">Site</a>
             </li>
             <li>
-               <a target="_blanck" href="https://web.facebook.com/rogeria.amaral.96"><i class="bx bxl-facebook socialLink"></i></a>
+               <a target="_blanck" href="https://www.instagram.com/rafinhas21"><i class="bx bxl-instagram socialLink"></i></a>
             </li>
             <li>
-               <a target="_blanck" href="https://www.instagram.com/rogeria.amaral.96/"><i class="bx bxl-instagram socialLink"></i></a>
-            </li>
-            <li>
-               <a target="_blanck" href="https://api.whatsapp.com/send?phone=5561992139597"><i class="bx bxl-whatsapp socialLink"></i></a>
+               <a target="_blanck" href="https://api.whatsapp.com/send?phone=5561994346828"><i class="bx bxl-whatsapp socialLink"></i></a>
             </li>
          </ul>
 

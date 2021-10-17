@@ -39,7 +39,7 @@ class PostSupport
    public static function renderizaPostagem(Postagem $obPostagen, Engine $view, bool $leiaMais = false, $size = 'xl', Router $router = null): string
    {
       $imgPost = url("themes/blog/partials/imgs/$obPostagen->imgPath");
-      $imgAutor = asset("img/roberta/capa23.jpg");
+      $imgAutor = asset("img/my.jpeg");
 
       $title = $obPostagen->titulo;
       $descricao = $obPostagen->descricao;
