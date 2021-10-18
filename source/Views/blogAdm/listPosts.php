@@ -39,7 +39,7 @@
                      </td>
                      <td><?= $post->descricao; ?></td>
                      <td><?= $categoriasName[$post->id]; ?></td>
-                     <td><img src="<?= url('themes/blog/partials/imgs/' . $post->imgPath); ?>" width="130px"> </td>
+                     <td><img src="<?= url('source/Views/blog/partials/imgs/' . $post->imgPath); ?>" width="130px"> </td>
                      <td class="tdAcoes">
                         <a href="<?= $router->route('BlogAdm.edtPost', ['id' => $post->id]); ?>"><i class="bx bx-edit text-primary mr-2"></i></a>
                         <a class="btnDeletarPost" href="<?= $router->route('BlogAdm.delPost', ['id' => $post->id]); ?>"><i class="bx bx-minus text-danger"></i></a>
