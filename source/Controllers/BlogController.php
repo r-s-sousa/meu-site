@@ -57,7 +57,7 @@ class BlogController extends Controller
    public function home(): void
    {
       $obPostagens = (new Postagem)->find('visivel = true')->order('id DESC')->fetch(true);
-      
+
       $obPostagens = (new Postagem);
       $blogUrl = URL . "/blog/?page=";
       $page = filter_input(INPUT_GET, 'page', FILTER_SANITIZE_STRIPPED);
@@ -118,7 +118,14 @@ class BlogController extends Controller
          die();
       }
 
-      $obPostagens = (new Postagem)->find('visivel = true AND titulo LIKE :p OR subtitulo LIKE :p', "p=%$pesquisa%")->order('id DESC')->fetch(true);
+      $blogUrl = URL . "/blog/posts?pesquisa={$pesquisa}&page=";
+      $page = filter_input(INPUT_GET, 'page', FILTER_SANITIZE_STRIPPED);
+      $paginator = new Paginator($blogUrl, "Página", ['Primeira página', 'Primeira'], ['Última página', 'Última']);
+      $obPostagens = (new Postagem)->find('visivel = true AND titulo LIKE :p OR subtitulo LIKE :p', "p=%$pesquisa%")->order('id DESC')->fetch(true) ?? [];
+      $totalEncontrado = count($obPostagens);
+      $paginator->pager(count($obPostagens), 2, $page, 2);
+      $obPostagens = array_slice($obPostagens, $paginator->offset(), $paginator->limit());
+      $paginatorHtml = $paginator->render();
 
       if (!$obPostagens) {
          $obPostagens = [];
@@ -134,7 +141,8 @@ class BlogController extends Controller
          'obCategorias' => $this->obCategorias,
          'ultimas' => $this->ultimas,
          'countCategorias' => $this->countCategorias,
-         'countPosts' => count($obPostagens),
+         'countPosts' => $totalEncontrado,
+         'paginator' => $paginatorHtml
       ]);
    }
 
@@ -146,12 +154,19 @@ class BlogController extends Controller
     */
    public function searchCategoria(array $data): void
    {
-      $categoriaName = "#" . filter_var($data['categoria'], FILTER_SANITIZE_STRING);
+      $catWithoutHash = filter_var($data['categoria'], FILTER_SANITIZE_STRING);
+      $categoriaName = "#" . $catWithoutHash;
       $obCategoria = Categorias::getCategoryObjByName($categoriaName);
       $obPostagens = [];
       if ($obCategoria) {
-         // descobrir todas pessoas que tem essa categoria
+         $blogUrl = URL . "/blog/posts/categoria/{$catWithoutHash}?page=";
+         $page = filter_input(INPUT_GET, 'page', FILTER_SANITIZE_STRIPPED);
+         $paginator = new Paginator($blogUrl, "Página", ['Primeira página', 'Primeira'], ['Última página', 'Última']);
          $obPostagens = Categorias::getPostagensWithContainsCategoryId($obCategoria->id);
+         $totalEncontrado = count($obPostagens);
+         $paginator->pager(count($obPostagens), 3, $page, 2);
+         $obPostagens = array_slice($obPostagens, $paginator->offset(), $paginator->limit());
+         $paginatorHtml = $paginator->render();
       }
 
       $postagensRenderizadas = PostSupport::renderizaPostagens($obPostagens, $this->view, $this->router);
@@ -163,7 +178,8 @@ class BlogController extends Controller
          'obCategorias' => $this->obCategorias,
          'ultimas' => $this->ultimas,
          'countCategorias' => $this->countCategorias,
-         'countPosts' => count($obPostagens)
+         'countPosts' => $totalEncontrado,
+         'paginator' => $paginatorHtml,
       ]);
    }
 }

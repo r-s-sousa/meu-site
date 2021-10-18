@@ -1,5 +1,6 @@
 <?php $this->layout('_theme', ['title' => $title]);
 $this->start('styles'); ?>
+<link rel="stylesheet" href="<?= asset('css/paginator.css'); ?>">
 <link rel="stylesheet" href="<?= asset('css/blog.css'); ?>">
 <?php $this->end(); ?>
 
@@ -22,6 +23,10 @@ $this->start('styles'); ?>
    </div>
 
    <?= $posts; ?>
+
+   <div class="col-md-12 text-center">
+      <?= $paginator; ?>
+   </div>
 </div>
 
 <div class="container">
