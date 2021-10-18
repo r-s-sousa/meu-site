@@ -39,8 +39,8 @@ class ProfileController extends Controller
 
       $qtdAcessos = (new Access)->find()->count();
 
-      echo $this->view->render('main/home', [
-         'title' => "HOME | " . SITE,
+      echo $this->view->render('page/home', [
+         'title' => SITE,
          'qtdAcessos' => $qtdAcessos
       ]);
    }

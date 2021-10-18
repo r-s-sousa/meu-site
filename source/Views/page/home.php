@@ -1,26 +1,26 @@
 <?php $this->layout('_theme', ['title' => $title]); ?>
 
-<?= $this->insert('main/partials/header'); ?>
+<?= $this->insert('page/partials/header'); ?>
 
-<?= $this->insert('main/partials/hero'); ?>
+<?= $this->insert('page/partials/hero'); ?>
 
 <main id="main">
 
-   <?= $this->insert('main/partials/about'); ?>
+   <?= $this->insert('page/partials/about'); ?>
 
-   <?= $this->insert('main/partials/facts'); ?>
+   <?= $this->insert('page/partials/facts'); ?>
 
-   <?= $this->insert('main/partials/skills'); ?>
+   <?= $this->insert('page/partials/skills'); ?>
 
-   <?= $this->insert('main/partials/resume'); ?>
+   <?= $this->insert('page/partials/resume'); ?>
 
-   <?= $this->insert('main/partials/services'); ?>
+   <?= $this->insert('page/partials/services'); ?>
 
-   <?= $this->insert('main/partials/contact'); ?>
+   <?= $this->insert('page/partials/contact'); ?>
 
 </main>
 
-<?= $this->insert('main/partials/footer', ['qtdAcessos' => $qtdAcessos]); ?>
+<?= $this->insert('page/partials/footer', ['qtdAcessos' => $qtdAcessos]); ?>
 
 <?= $this->start('scripts'); ?>
 <script>
