@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 17/10/2021 às 18:04
--- Versão do servidor: 8.0.26-0ubuntu0.20.04.3
+-- Tempo de geração: 18/10/2021 às 10:47
+-- Versão do servidor: 8.0.26-0ubuntu0.20.04.2
 -- Versão do PHP: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -96,14 +96,7 @@ INSERT INTO `mensagens` (`id`, `nome`, `email`, `titulo`, `mensagem`, `email_sen
 (9, 'rafael_sousa2018@outlook.com', 'rafael_sousa2018@outlook.com', 'assunto', 'mensagem', NULL, '2021-10-17 02:44:54', '2021-10-17 02:44:54', NULL),
 (10, 'rafael_sousa2018@outlook.com', 'rafael_sousa2018@outlook.com', 'assunto', 'mensagem', NULL, '2021-10-17 02:45:08', '2021-10-17 02:45:08', NULL),
 (11, 'rafinhasousa2111@gmail.com', 'rafinhasousa2111@gmail.com', 'assunto', 'mensagem', NULL, '2021-10-17 02:45:39', '2021-10-17 02:45:39', NULL),
-(12, 'Ana Clara', 'alclanaa5404@gmail.com', 'Mensagem pro meu mozão', 'Te amo!', NULL, '2021-10-17 03:00:49', '2021-10-17 03:00:49', NULL),
-(13, 'Rafael', 'rafael_sousa2018@outlook.com', 'Assunto da mensagem', 'Minha mensagem aqui', NULL, '2021-10-17 11:55:01', '2021-10-17 11:55:01', NULL),
-(14, 'Rafael Teste', 'teste@gmail.com', 'assunto', 'teste', NULL, '2021-10-17 11:56:14', '2021-10-17 11:56:14', NULL),
-(15, 'Rafael', 'rafael_sousa2018@outlook.com', 'Teste', 'Mensagem', NULL, '2021-10-17 13:35:25', '2021-10-17 13:35:25', NULL),
-(16, 'rafael', 'rafael_sousa2018@outlook.com', 'teste', 'teste.com', NULL, '2021-10-17 13:55:32', '2021-10-17 13:55:32', NULL),
-(17, 'Rafael Teste', 'rafael_sousa2018@outlook.com', 'teste', 'teste', NULL, '2021-10-17 21:00:23', '2021-10-17 21:00:23', NULL),
-(18, 'teste teste', 'teste@gmail.com', 'testessssssssssss', 'tesssssssssssssssstessssssssssss', NULL, '2021-10-17 21:01:16', '2021-10-17 21:01:16', NULL),
-(19, 'rafael sousa', 'teste@gmail.com', 'testando assunto', 'testando mensagem', NULL, '2021-10-17 21:02:10', '2021-10-17 21:02:10', NULL);
+(12, 'Ana Clara', 'alclanaa5404@gmail.com', 'Mensagem pro meu mozão', 'Te amo!', NULL, '2021-10-17 03:00:49', '2021-10-17 03:00:49', NULL);
 
 -- --------------------------------------------------------
 
@@ -131,12 +124,8 @@ CREATE TABLE `postagens` (
 --
 
 INSERT INTO `postagens` (`id`, `titulo`, `descricao`, `subtitulo`, `slug`, `imgPath`, `dataPostagem`, `visivel`, `categorias`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(22, 'Mapa mental', '&lt;h2&gt;&lt;span style=&quot;background-color:rgb(255,255,255);color:rgb(32,33,34);&quot;&gt;Os mapas mentais&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;&lt;span style=&quot;background-color:rgb(255,255,255);color:rgb(32,33,34);&quot;&gt;&nbsp;procuram representar, com o m&aacute;ximo de detalhes poss&iacute;veis, o relacionamento conceitual existente entre informa&ccedil;&otilde;es que normalmente est&atilde;o fragmentadas, difusas e pulverizadas no ambiente operacional ou corporativo. Trata-se de uma ferramenta para ilustrar ideias e conceitos, dar-lhes forma e contexto, tra&ccedil;ar os relacionamentos de causa, efeito, simetria e/ou similaridade que existem entre elas e torn&aacute;-las mais palp&aacute;veis e mensur&aacute;veis, sobre os quais se possa planejar a&ccedil;&otilde;es e estrat&eacute;gias para alcan&ccedil;ar objetivos espec&iacute;ficos.&lt;/span&gt;&lt;/p&gt;', 'Beneficios do uso de mapas mentais', 'mapa-mental-3', 'ed3c2bce9c805070e15d5e47d0144c8a.png', '2021-10-17', 1, '[\"38\"]', '2021-10-17 03:24:43', '2021-10-17 12:33:01', NULL),
-(23, 'mapa mental 2', '&lt;h2&gt;&lt;span style=&quot;background-color:rgb(255,255,255);color:rgb(32,33,34);&quot;&gt;Os mapas mentais&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;&lt;span style=&quot;background-color:rgb(255,255,255);color:rgb(32,33,34);&quot;&gt;&nbsp;procuram representar, com o m&aacute;ximo de detalhes poss&iacute;veis, o relacionamento conceitual existente entre informa&ccedil;&otilde;es que normalmente est&atilde;o fragmentadas, difusas e pulverizadas no ambiente operacional ou corporativo. Trata-se de uma ferramenta para ilustrar ideias e conceitos, dar-lhes forma e contexto, tra&ccedil;ar os relacionamentos de causa, efeito, simetria e/ou similaridade que existem entre elas e torn&aacute;-las mais palp&aacute;veis e mensur&aacute;veis, sobre os quais se possa planejar a&ccedil;&otilde;es e estrat&eacute;gias para alcan&ccedil;ar objetivos espec&iacute;ficos.&lt;/span&gt;&lt;/p&gt;', 'aqui vera beneficios de usar mapas mentais', 'mapa-mental-2', 'd88779a8a4bd946a73ec333e0c9856db.png', '2021-10-17', 1, '[\"44\"]', '2021-10-17 03:27:44', '2021-10-17 03:27:57', NULL),
-(24, 'titulo', '&lt;p&gt;teste&lt;/p&gt;', 'teste', 'teste', '4d0c10149f728efcc0ce4bb4c8edcbbb.png', '2021-10-17', 1, '[\"37\"]', '2021-10-17 12:52:52', '2021-10-17 12:52:52', NULL),
-(25, 'titulo', '&lt;p&gt;teste2&lt;/p&gt;', 'teste', 'teste2', '5d9c1488ba4084322217c5e4e0f87dc6.png', '2021-10-17', 1, '[\"37\"]', '2021-10-17 12:53:26', '2021-10-17 12:53:26', NULL),
-(26, 'teste', '&lt;p&gt;teste&lt;/p&gt;', 'teste2', 'teste22', '0974cd31ed7e1ddac59a186198f12c11.png', '2021-10-17', 1, '[\"37\"]', '2021-10-17 12:53:47', '2021-10-17 12:53:47', NULL),
-(27, 'teste', '&lt;p&gt;teste3&lt;/p&gt;', 'teste', 'teste3', '32390fbd93e04348d0f066b3a40e736d.png', '2021-10-17', 1, '[\"37\"]', '2021-10-17 12:54:01', '2021-10-17 12:54:01', NULL);
+(22, 'Mapa mental', '&lt;h2&gt;&lt;span style=&quot;background-color:rgb(255,255,255);color:rgb(32,33,34);&quot;&gt;Os mapas mentais&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;&lt;span style=&quot;background-color:rgb(255,255,255);color:rgb(32,33,34);&quot;&gt;&nbsp;procuram representar, com o m&aacute;ximo de detalhes poss&iacute;veis, o relacionamento conceitual existente entre informa&ccedil;&otilde;es que normalmente est&atilde;o fragmentadas, difusas e pulverizadas no ambiente operacional ou corporativo. Trata-se de uma ferramenta para ilustrar ideias e conceitos, dar-lhes forma e contexto, tra&ccedil;ar os relacionamentos de causa, efeito, simetria e/ou similaridade que existem entre elas e torn&aacute;-las mais palp&aacute;veis e mensur&aacute;veis, sobre os quais se possa planejar a&ccedil;&otilde;es e estrat&eacute;gias para alcan&ccedil;ar objetivos espec&iacute;ficos.&lt;/span&gt;&lt;/p&gt;', 'Beneficios do uso de mapas mentais', 'mapa-mental-3', 'ed3c2bce9c805070e15d5e47d0144c8a.png', '2021-10-17', 1, '[\"38\"]', '2021-10-17 03:24:43', '2021-10-17 03:31:47', NULL),
+(23, 'mapa mental 2', '&lt;h2&gt;&lt;span style=&quot;background-color:rgb(255,255,255);color:rgb(32,33,34);&quot;&gt;Os mapas mentais&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;&lt;span style=&quot;background-color:rgb(255,255,255);color:rgb(32,33,34);&quot;&gt;&nbsp;procuram representar, com o m&aacute;ximo de detalhes poss&iacute;veis, o relacionamento conceitual existente entre informa&ccedil;&otilde;es que normalmente est&atilde;o fragmentadas, difusas e pulverizadas no ambiente operacional ou corporativo. Trata-se de uma ferramenta para ilustrar ideias e conceitos, dar-lhes forma e contexto, tra&ccedil;ar os relacionamentos de causa, efeito, simetria e/ou similaridade que existem entre elas e torn&aacute;-las mais palp&aacute;veis e mensur&aacute;veis, sobre os quais se possa planejar a&ccedil;&otilde;es e estrat&eacute;gias para alcan&ccedil;ar objetivos espec&iacute;ficos.&lt;/span&gt;&lt;/p&gt;', 'aqui vera beneficios de usar mapas mentais', 'mapa-mental-2', 'd88779a8a4bd946a73ec333e0c9856db.png', '2021-10-17', 1, '[\"44\"]', '2021-10-17 03:27:44', '2021-10-17 03:27:57', NULL);
 
 -- --------------------------------------------------------
 
@@ -221,13 +210,13 @@ ALTER TABLE `categorias`
 -- AUTO_INCREMENT de tabela `mensagens`
 --
 ALTER TABLE `mensagens`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de tabela `postagens`
 --
 ALTER TABLE `postagens`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT de tabela `usuarios`
