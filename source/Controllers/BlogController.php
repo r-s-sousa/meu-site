@@ -131,7 +131,7 @@ class BlogController extends Controller
          $obPostagens = [];
          $postagensRenderizadas = null;
       } else {
-         $postagensRenderizadas = PostSupport::renderizaPostagens($obPostagens, $this->view);
+         $postagensRenderizadas = PostSupport::renderizaPostagens($obPostagens, $this->view, $this->router);
       }
 
       echo $this->view->render('blog/blogSearch', [
