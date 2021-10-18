@@ -35,7 +35,7 @@ abstract class Controller
       $this->router = $router;
 
       // DEFINE A PASTA DOS THEMAS A SEREM RENDERIZADOS
-      $this->view = new Engine(dirname(__DIR__, 2) . "/themes");
+      $this->view = new Engine(dirname(__DIR__) . "/Views");
 
       // PASSA O OBJ CONTROLADOR DE ROTAS PARA TODOS TEMPLATES
       $this->view->addData(['router' => $router]);
