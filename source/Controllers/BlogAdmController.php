@@ -100,7 +100,7 @@ class BlogAdmController extends Controller
     */
    public function cadPostDados(array $dados): void
    {
-      $uploaddir = dirname(__DIR__, 2) . "/themes/blog/partials/imgs/";
+      $uploaddir = dirname(__DIR__) . "/Views/blog/partials/imgs/";
       $ext = explode(".", $_FILES['img']['name']);
       $ext = "." . $ext[count($ext) - 1];
       $nomeArquivo = md5(date('Y-m-d H:i:s')) . $ext;
@@ -132,7 +132,7 @@ class BlogAdmController extends Controller
    public function edtPostDados(array $dados): void
    {
       $obPost = (new Postagem)->findById($dados['id']);
-      $uploaddir = dirname(__DIR__, 2) . "/themes/blog/partials/imgs/";
+      $uploaddir = dirname(__DIR__) . "/Views/blog/partials/imgs/";
       if (strlen($_FILES['img']['name']) > 0) {
          $ext = explode(".", $_FILES['img']['name']);
          $ext = "." . $ext[count($ext) - 1];
