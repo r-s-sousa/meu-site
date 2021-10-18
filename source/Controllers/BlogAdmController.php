@@ -106,6 +106,11 @@ class BlogAdmController extends Controller
       $nomeArquivo = md5(date('Y-m-d H:i:s')) . $ext;
       $uploadfile = $uploaddir . basename($nomeArquivo);
       $resultadoMoveFile = move_uploaded_file($_FILES['img']['tmp_name'], $uploadfile);
+      if (!$resultadoMoveFile) {
+         setMessage('error', 'Error ao fazer upload do arquivo!');
+         $this->router->redirect('BlogAdm.home');
+         return;
+      }
 
       $htmlEntities = filter_var($dados['descricao'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
@@ -138,9 +143,15 @@ class BlogAdmController extends Controller
          $ext = "." . $ext[count($ext) - 1];
          $nomeArquivo = md5(date('Y-m-d H:i:s')) . $ext;
          $uploadfile = $uploaddir . basename($nomeArquivo);
-         move_uploaded_file($_FILES['img']['tmp_name'], $uploadfile);
+         $resultadoMoveFile = move_uploaded_file($_FILES['img']['tmp_name'], $uploadfile);
       } else {
          $nomeArquivo = $obPost->imgPath;
+         $resultadoMoveFile = true;
+      }
+      if (!$resultadoMoveFile) {
+         setMessage('error', 'Error ao fazer upload do arquivo!');
+         $this->router->redirect('BlogAdm.home');
+         return;
       }
 
       $htmlEntities = filter_var($dados['descricao'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
