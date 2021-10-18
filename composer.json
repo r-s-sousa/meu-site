@@ -21,9 +21,9 @@
          "Source\\": "source"
       },
       "files": [
-         "source/config.php",
-         "source/minify.php",
-         "source/helpers.php"
+         "source/Bootstrap/config.php",
+         "source/Bootstrap/minify.php",
+         "source/Bootstrap/helpers.php"
       ]
    }
 }
