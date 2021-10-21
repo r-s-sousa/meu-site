@@ -53,6 +53,10 @@
                 "save",
                 "upinside"
             ],
+            "support": {
+                "issues": "https://github.com/robsonvleite/datalayer/issues",
+                "source": "https://github.com/robsonvleite/datalayer/tree/1.1.8"
+            },
             "time": "2021-03-21T14:00:57+00:00"
         },
         {
@@ -97,6 +101,10 @@
                 "paginator",
                 "upinside"
             ],
+            "support": {
+                "issues": "https://github.com/robsonvleite/paginator/issues",
+                "source": "https://github.com/robsonvleite/paginator/tree/1.0.7"
+            },
             "time": "2021-03-21T17:57:29+00:00"
         },
         {
@@ -270,6 +278,10 @@
                 "minifier",
                 "minify"
             ],
+            "support": {
+                "issues": "https://github.com/matthiasmullie/minify/issues",
+                "source": "https://github.com/matthiasmullie/minify/tree/1.3.66"
+            },
             "funding": [
                 {
                     "url": "https://github.com/[user1",
@@ -333,6 +345,10 @@
                 "paths",
                 "relative"
             ],
+            "support": {
+                "issues": "https://github.com/matthiasmullie/path-converter/issues",
+                "source": "https://github.com/matthiasmullie/path-converter/tree/1.1.3"
+            },
             "time": "2019-02-05T23:41:09+00:00"
         },
         {
@@ -383,6 +399,9 @@
             ],
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v2.4.0"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -450,6 +469,9 @@
                 "env",
                 "environment"
             ],
+            "support": {
+                "source": "https://github.com/symfony/dotenv/tree/v5.3.8"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -475,5 +497,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.1.0"
 }

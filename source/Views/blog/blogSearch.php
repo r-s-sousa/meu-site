@@ -25,7 +25,7 @@ $this->start('styles'); ?>
    <?= $posts; ?>
 
    <div class="col-md-12 text-center">
-      <?= $paginator; ?>
+      <?= $paginator ?? ''; ?>
    </div>
 </div>
 
